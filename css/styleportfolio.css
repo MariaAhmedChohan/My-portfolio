@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: aliceblue;
+
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+animation: slideRight 1s ease forwards;
+   
+}
+
+.home {
+    position: relative;
+       
+    display:flex ;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 20px 10% 0;
+}
+
+
+
+.home-img img {
+    max-width: 150px;
+    border: 2px solid blue;
+    border-radius: 50%;
+    margin-right: -20px;
+    
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 50%;
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s;
+    opacity: 0;
+    animation: slideLeft .1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+background: blue ;
+color: black;
+box-shadow: 0 0 20px blue;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: blue;
+    border-radius: 40px;
+    box-shadow: 0 0 10px blue;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .2s;
+    opacity: 0;
+    animation: slideLeft .1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+
+.portfolio {
+    background: var(--second-bg-color);
+
+}
+
+.portfolio-container {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    
+}
+.portfolio-container .portfolio-box{
+        position: relative;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem var(--bg-color);
+        overflow: hidden;
+        display: flex;
+       width: 80%;
+        height: 80%;
+}
+
+.portfolio-box img {
+    
+   width: 80%;
+    height: 80%;
+    transition: .5 ease;
+    border-radius:  20%;
+
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+    
+.portfolio-box .portfolio-layer   {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 50%;
+    background: linear-gradient(rgba 0 0 0 .1), var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 0.1rem;
+    gap: 5rem;
+    transform: translateY(100%);
+    transition: .5 ease;
+
+
+}
+
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0%);
+
+}
+
+
+
+.portfolio-layer h4  {
+
+    font-size: 1rem;
+}
+
+.portfolio-layer p  {
+    margin-bottom:5%;
+
+    font-size: 1rem;
+    
+}
+.portfolio a {
+    display: inline;
+justify-content: center;
+align-items: center;
+width: 5rem;
+height: 5rem;
+background: var(--text-color);
+
+}
+
+.portfolio-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(-100px);
+opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+            }
+          
+}
+@keyframes ZoomIn {
+    0%{
+        transform: scale(0);
+opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+            }
+}
+
+@keyframes floatImage {
+    0% {
+        transform:translateY(0);
+    }
+    50% {
+        transform:translateY(44px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
